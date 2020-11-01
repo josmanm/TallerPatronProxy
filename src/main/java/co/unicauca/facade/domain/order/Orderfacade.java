@@ -5,13 +5,14 @@
  */
 package co.unicauca.facade.domain.order;
 
+import co.unicauca.facade.acess.IOrderRepository;
 import static co.unicauca.facade.domain.order.State.CANCELLED;
 
 /**
  *
  * @author SANTIAGO MUÑOZ
  */
-public class Orderfacade {
+public class Orderfacade implements IOrderService{
     private Order order;
     
     public Orderfacade(){
@@ -40,6 +41,11 @@ public class Orderfacade {
     public int totalDishes(){
          return order.getDetalis().size();
     }
-    public void save(){
+
+    @Override
+    public void save(IOrderRepository repo) {
+        repo.createOrder(order);
     }
+
+
 }

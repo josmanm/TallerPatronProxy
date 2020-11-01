@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.unicauca.facade.acess;
+package co.unicauca.facade.domain.order;
 
-import co.unicauca.facade.domain.order.Order;
-import java.util.List;
+import co.unicauca.facade.acess.IOrderRepository;
 
 /**
  *
  * @author SANTIAGO MUÑOZ
  */
-public interface IOrderRepository {
-    public void createOrder(Order order);
+public interface IOrderService {
+    
+    public void save(IOrderRepository repo);
 }

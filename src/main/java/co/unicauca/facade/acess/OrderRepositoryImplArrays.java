@@ -5,10 +5,17 @@
  */
 package co.unicauca.facade.acess;
 
+import co.unicauca.facade.domain.order.Order;
+
 /**
  *
  * @author SANTIAGO MUÑOZ
  */
-public class OrderRepositoryImplArrays {
+public class OrderRepositoryImplArrays implements  IOrderRepository{
+
+    @Override
+    public void createOrder(Order order) {
+       
+    }
     
 }
