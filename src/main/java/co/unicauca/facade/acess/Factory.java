@@ -1,17 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.unicauca.facade.acess;
 
 /**
  *
- * @author SANTIAGO MUÑOZ
+ * @author SANTIAGO MUÑOZ, JUAN LOPEZ.
  */
 public class Factory {
-        private static Factory instance;
 
+    /**
+     * Variable de tipo Factory.
+     */
+    private static Factory instance;
+
+    /**
+     * Constructor parametrizado
+     */
     private Factory() {
     }
 
@@ -28,10 +30,11 @@ public class Factory {
         return instance;
 
     }
-        /**
-     * Método que crea una instancia concreta de la jerarquia IRestaurantService
+
+    /**
+     * Método que crea una instancia concreta de la jerarquia IOrdenRepository.
      *
-     * @return una clase hija de la abstracción IRepositorioRestaurantes
+     * @return una clase hija de la abstracción IOrdenRepository.
      */
     public OrderRepositoryImplArrays getRepository(String type) {
         OrderRepositoryImplArrays result = null;

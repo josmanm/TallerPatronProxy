@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.unicauca.facade.domain.order;
 
 import co.unicauca.facade.acess.Factory;
@@ -10,17 +5,29 @@ import co.unicauca.facade.acess.IOrderRepository;
 
 /**
  *
- * @author SANTIAGO MUÑOZ
+ * @author SANTIAGO MUÑOZ, JUAN LOPEZ
  */
 public class ProxyClient {
+
+    /**
+     * Variable de la interfaz IOrderService
+     */
     private IOrderService orderServicie;
-    
-    public  ProxyClient( IOrderService orderService){
-        this.orderServicie=orderService;
+
+    /**
+     * Constructor parametrizado.
+     *
+     * @param orderService
+     */
+    public ProxyClient(IOrderService orderService) {
+        this.orderServicie = orderService;
     }
-    
-    public void CreateOrder(){
-        IOrderRepository repo=Factory.getInstance().getRepository("default");
+
+    /**
+     * Metodo encargado de crear orden y guardarla.
+     */
+    public void CreateOrder() {
+        IOrderRepository repo = Factory.getInstance().getRepository("default");
         orderServicie.save(repo);
     }
 }

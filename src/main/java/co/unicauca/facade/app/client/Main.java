@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.unicauca.facade.app.client;
 
 import co.unicauca.facade.acess.Factory;
@@ -17,14 +12,15 @@ import co.unicauca.facade.domain.order.State;
 
 /**
  *
- * @author SANTIAGO MUÑOZ
+ * @author SANTIAGO MUÑOZ, JUAN LOPEZ
  */
 public class Main {
+
     public static void main(String[] args) {
         Orderfacade orderFacade = new Orderfacade();
-        
+
         //El objeto proxy. Se le pasa el objeto real por el constructor
-         IOrderService orderProxy = new OrderServiceLogger(orderFacade);
+        IOrderService orderProxy = new OrderServiceLogger(orderFacade);
 
         orderFacade.createOrder(new Customer(1, "Carlos Sanchez", "Calle 12 No. 12-12 BarrioCaldas", "3115677899", "Popayán"));
         orderFacade.addDish(new Dish(1, "Hamburguesa vegetariana", 5000), 2);
@@ -43,9 +39,6 @@ public class Main {
         //Ahora ejecutamos el cliente proxy, y le pasamos el sujeto que debe utilizar.
         ProxyClient client = new ProxyClient(orderProxy);
         client.CreateOrder();
-
-
-
 
     }
 }

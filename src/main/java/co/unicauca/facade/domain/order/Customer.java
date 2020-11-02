@@ -1,24 +1,47 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.unicauca.facade.domain.order;
 
 /**
  *
- * @author SANTIAGO MUÑOZ
+ * @author SANTIAGO MUÑOZ, JUAN LOPEZ
  */
 public class Customer {
+
+    /**
+     * Variable de tipo entero.
+     */
     private int id;
+    /**
+     * Variable de tipo String.
+     */
     private String name;
+    /**
+     * Variable de tipo String.
+     */
     private String andrress;
+    /**
+     * Variable de tipo String.
+     */
     private String moblie;
+    /**
+     * Variable de tipo String.
+     */
     private String city;
 
+    /**
+     * Constructor por defecto.
+     */
     public Customer() {
     }
 
+    /**
+     * Constructor Parametrizado.
+     *
+     * @param id
+     * @param name
+     * @param andrress
+     * @param moblie
+     * @param city
+     */
     public Customer(int id, String name, String andrress, String moblie, String city) {
         this.id = id;
         this.name = name;
@@ -26,7 +49,8 @@ public class Customer {
         this.moblie = moblie;
         this.city = city;
     }
-    
+
+    // SETTERS AND GETTERS
     public int getId() {
         return id;
     }
@@ -66,6 +90,5 @@ public class Customer {
     public void setCity(String city) {
         this.city = city;
     }
-    
-    
+
 }

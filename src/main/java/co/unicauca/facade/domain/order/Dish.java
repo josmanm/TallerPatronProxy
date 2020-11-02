@@ -1,29 +1,44 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package co.unicauca.facade.domain.order;
 
 /**
  *
- * @author SANTIAGO MUÑOZ
+ * @author SANTIAGO MUÑOZ, JUAN LOPEZ
  */
 public class Dish {
+
+    /**
+     * Variable de tipo entero.
+     */
     private int id;
+    /**
+     * Variable de tipo String.
+     */
     private String name;
+    /**
+     * Variable de tipo entero.
+     */
     private int price;
-    
-    public Dish(){
+
+    /**
+     * Constructor por defecto.
+     */
+    public Dish() {
     }
 
+    /**
+     * Constructor parametrizado.
+     *
+     * @param id
+     * @param name
+     * @param price
+     */
     public Dish(int id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
-    
 
+    //SETTERS AND GETTERS
     public int getId() {
         return id;
     }
